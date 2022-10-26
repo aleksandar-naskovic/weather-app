@@ -60,19 +60,21 @@ export default {
   margin-top: 150px;
   flex-direction: row;
   margin-bottom: 145px;
-    max-width: 1520px;
+  max-width: 1520px;
 }
 
 
 
 .title {
   font-family: "Poppins Bold";
+  color: #FFFFFF;
 }
 
 .subtitle {
   font-family: "Poppins Light";
   margin-top: 0;
   margin-bottom: 70px;
+  color: #FFFFFF;
 }
 
 @media (max-width: 1020px) {
