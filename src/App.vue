@@ -19,7 +19,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background:  linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, -6)) , url("assets/background.png")  no-repeat center center fixed ;
+  background:  #0A545F url("assets/background.png")  no-repeat center center fixed ;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
