@@ -38,11 +38,15 @@ export default {
   },
   created() {
     this.cities = JSON.parse(localStorage.getItem("cities") || '[]')
+    //Removing items from storage for testing purposes
     // localStorage.removeItem("cities")
   },
 }
 </script>
 <style>
+.home{
+  max-width: 1520px;
+}
 .primary-controls {
   margin: auto;
   width: 1000px;
@@ -56,7 +60,10 @@ export default {
   margin-top: 150px;
   flex-direction: row;
   margin-bottom: 145px;
+    max-width: 1520px;
 }
+
+
 
 .title {
   font-family: "Poppins Bold";
@@ -66,5 +73,40 @@ export default {
   font-family: "Poppins Light";
   margin-top: 0;
   margin-bottom: 70px;
+}
+
+@media (max-width: 1020px) {
+
+  .citiesCards {
+    margin-top: 50px;
+    margin-bottom: 42px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .primary-controls {
+    width: 660px;
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .citiesCards {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .primary-controls {
+    width: 350px;
+    margin-top: 30px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
 }
 </style>

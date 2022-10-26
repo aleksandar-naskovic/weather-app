@@ -1,12 +1,12 @@
 <template>
   <div v-if="cityInfo" class="cityInfoCard">
-    <div class="main-info">
+    <div class="main-info short">
       <h3>{{ cityInfo.address }}</h3>
       <p>{{ cityInfo.resolvedAddress }}</p>
       <p>{{ cityInfo.latitude }}<span>&#176;</span>N, {{ cityInfo.longitude }}<span>&#176;</span>N</p>
     </div>
     <div class="temperature">
-      <img v-bind:src="require('../assets/' + cityInfo.currentConditions.icon + '@2x.png')" style="width: 75px; height: 75px"/>
+      <img v-bind:src="require('../assets/' + cityInfo.currentConditions.icon + '@2x.png')"/>
       <h2>{{convertFahrenheitToCelsius(cityInfo.currentConditions.temp)}}&#176;C</h2>
     </div>
     <div class="main-info">
@@ -95,20 +95,52 @@ h2 {
   text-align: center;
 }
 
+.temperature img{
+  width: 75px;
+  height: 75px;
+}
+
 /* Responsiveness */
-@media (max-width: 900px) {
-  body {
-    padding: 40px 20px;
-  }
+@media (max-width: 1020px) {
+
 
   .cityInfoCard {
-    flex-direction: column;
-    padding: 20px;
+    max-width: 862px;
   }
 
+  .temperature {
+    padding:  0 50px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 650px) {
   .cityInfoCard {
-    padding: 30px;
+    max-width: 350px;
+    flex-wrap: wrap;
   }
 
+  .temperature {
+    margin-top: 30px;
+    padding:  0px;
+    margin-right:  70px;
+  }
+
+  .temperature img{
+    width: 48px;
+    height: 48px;
+  }
+
+  h2 {
+    font: normal normal 600 24px/30px Poppins Bold;
+  }
+
+  .cityInfoCard .main-info {
+    width: 50%;
+  }
+
+  .short {
+    padding-right: 100px;
+  }
 }
 </style>

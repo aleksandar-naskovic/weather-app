@@ -1,10 +1,13 @@
 <template>
 <!--  Home Page Card-->
     <div class="card" v-if="city">
+<!--      Name-->
       <div class="city">
         <p>{{city.generalInfo[0].name}}</p>
       </div>
+<!--      Country-->
       <div class="country"><p>{{getCountryName(city.generalInfo[0].country)}}</p></div>
+<!--      Temperature-->
       <div class="temperature">
         <p>{{convertFahrenheitToCelsius(city.detailedInfo.currentConditions.temp)}}<span>&#176;</span>C</p>
       </div>
@@ -19,7 +22,6 @@ export default {
       city: {}
   },
   created() {
-    console.log(this.city)
     // localStorage.removeItem("cities")
   },
   methods: {
@@ -98,4 +100,57 @@ export default {
   cursor: pointer;
 }
 
+@media (max-width: 1020px) {
+  .card {
+
+    width: 210px;
+    margin-bottom: 20px;
+    margin-right: 15px;
+    padding-bottom: 40px;
+  }
+
+  .card:last-child{
+    margin-bottom: 20px;
+    margin-right: 15px;
+  }
+
+  .card:nth-child(3) {
+    margin-right: 0px;
+  }
+
+
+
+  .button {
+    width: 170px;
+    /* UI Properties */
+  }
+}
+
+@media (max-width: 650px) {
+  .card {
+    width: 170px;
+    margin-bottom: 10px;
+    margin-right: 8px;
+    padding-bottom: 30px;
+  }
+
+  .card:last-child{
+    margin-bottom: 20px;
+    margin-right: 15px;
+  }
+
+  .card:nth-child(even) {
+    margin-right: 0px;
+  }
+  .card:nth-child(3) {
+    margin-right: 8px;
+  }
+
+
+
+  .button {
+    width: 140px;
+    /* UI Properties */
+  }
+}
 </style>

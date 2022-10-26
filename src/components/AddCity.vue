@@ -4,7 +4,7 @@
     <div class="search_wrap ">
       <div class="search_box">
         <div class="circle">
-          <img src="../assets/Icon awesome-plus.svg" style="width: 16px; height: 16px">
+          <img src="../assets/Icon awesome-plus.svg" >
         </div>
         <input v-model="city" type="text" class="input" placeholder="Add a city...">
       </div>
@@ -94,6 +94,11 @@ p {
   margin-right: 20px;
 }
 
+.circle img{
+  width: 16px;
+  height: 16px;
+}
+
 
 .search_wrap{
   width: 1000px;
@@ -124,5 +129,44 @@ p {
   color: #707070;
   opacity: 1;
   width: 100%;
+}
+
+@media (max-width: 1020px) {
+  .btn {
+    width: 113px;
+    height: 55px;
+  }
+
+  .search_wrap{
+    width: 660px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 650px) {
+  .btn {
+    width: 54px;
+    height: 26px;
+    font: normal normal normal 10px/15px Poppins Medium;
+  }
+
+  .search_wrap{
+    width: 350px;
+    height: 30px;
+  }
+
+  .search_wrap .search_box .input {
+    padding: 0;
+
+  }
+  .circle {
+    width: 22px;
+    height: 22px;
+  }
+
+  .circle img{
+    width: 8px;
+    height: 8px;
+  }
 }
 </style>

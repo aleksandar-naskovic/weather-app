@@ -29,11 +29,25 @@
 }
 
 #container {
-  width: 1520px;
+  max-width: 1520px;
   position: relative;
   display: flex;
   margin: auto;
   flex-direction: column;
+}
+
+@media (max-width: 1020px) {
+
+  #container {
+    max-width: 660px;
+  }
+}
+
+@media (max-width: 650px) {
+
+  #container {
+    max-width: 350px;
+  }
 }
 
 #nav {

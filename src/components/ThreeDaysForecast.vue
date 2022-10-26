@@ -97,4 +97,40 @@ caption {
   margin:0;
   padding:0;
 }
+
+/* Responsiveness */
+@media (max-width: 1020px) {
+  .hourViewCard {
+    width: 660px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .hourViewCard ::-webkit-scrollbar {
+    height: 10px;
+  }
+
+
+  .hourViewCard ::-webkit-scrollbar-track {
+    background: #EFEFEF;
+  }
+
+  .hourViewCard ::-webkit-scrollbar-thumb {
+    background: #5D979B;
+  }
+
+  .hourViewCard ::-webkit-scrollbar-thumb:hover {
+    background: #5D979B;
+  }
+}
+
+@media (max-width: 650px) {
+  .hourViewCard {
+    max-width: 350px;
+  }
+}
 </style>
